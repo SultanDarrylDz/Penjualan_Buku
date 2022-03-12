@@ -23,7 +23,6 @@ class PengarangController extends Controller
     {
         $rules = [
             'nama_pengarang' => 'required',
-            'alamat' => 'required',
             'email' => 'required',
 
         ];
@@ -31,7 +30,6 @@ class PengarangController extends Controller
         $message = [
             'nama_pengarang.required' => 'nama pengarang harus diisi',
             'nama_pengarang.numeric' => 'nama pengarang tidak boleh angka',
-            'alamat' => 'alamat harus diisi',
             'email.required' => 'alamat harus di isi',
 
 
@@ -45,13 +43,11 @@ class PengarangController extends Controller
         //validasi data
         $validated = $request->validate([
             'nama_pengarang' => 'required',
-            'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $pengarang = new Pengarang;
         $pengarang->nama_pengarang = $request->nama_pengarang;
-        $pengarang->alamat = $request->alamat;
         $pengarang->email = $request->email;
         $pengarang->save();
         Alert::success('Data '.$pengarang->nama_pengarang.' Berhasil Ditambahkan');
@@ -74,13 +70,11 @@ class PengarangController extends Controller
         //
         $validated = $request->validate([
             'nama_pengarang' => 'required',
-            'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $pengarang = Pengarang::findOrFail($id);
         $pengarang->nama_pengarang = $request->nama_pengarang;
-        $pengarang->alamat = $request->alamat;
         $pengarang->email = $request->email;
         $pengarang->save();
         Alert::success('Data '.$pengarang->nama_pengarang.' Berhasil Diedit');

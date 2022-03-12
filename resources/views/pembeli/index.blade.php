@@ -26,6 +26,7 @@
                             <tr>
                                 <th>Kode Pembeli</th>
                                 <th>Nama Pembeli</th>
+                                <th>No Telp</th>
                                 <th>Alamat</th>
                                 <th>Aksi</th>
                             </tr>
@@ -34,7 +35,9 @@
                                 <tr>
                                     <td>{{ $data->kode_pembeli }}</td>
                                     <td>{{ $data->nama_pembeli }}</td>
+                                    <td>{{ $data->no_hp }}</td>
                                     <td>{{ $data->alamat }}</td>
+
                                     <td>
                                         <form action="{{ route('pembeli.destroy', $data->id) }}" method="post">
                                             @method('delete')

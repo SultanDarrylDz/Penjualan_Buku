@@ -39,9 +39,6 @@
                                 </span>
                             @enderror
                         </div>
-                         <label for="alamat">Alamat:</label>
-                            <textarea id="alamat" name="alamat" rows="4" cols="140">
-                            </textarea>
                         <div class="form-group">
                             <label for="">Masukan Email</label>
                             <input type="text" name="email" class="form-control @error('email') is-invalid @enderror">

@@ -33,10 +33,6 @@
                         <input type="text" name="nama_penerbit" value="{{$penerbit->nama_penerbit}}" class="form-control" readonly>
                     </div>
                     <div class="form-group">
-                        <label for=""> Alamat</label>
-                        <input type="text" name="alamat" value="{{$penerbit->alamat}}" class="form-control" readonly>
-                    </div>
-                    <div class="form-group">
                         <label for=""> Email</label>
                         <input type="text" name="email" value="{{$penerbit->email}}" class="form-control" readonly>
                     </div>

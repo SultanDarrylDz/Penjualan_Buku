@@ -24,7 +24,6 @@
                                 <tr>
                                     <th>NO</th>
                                     <th>Nama Penerbit</th>
-                                    <th>Alamat</th>
                                     <th>Email</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -34,7 +33,6 @@
                                     <tr>
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->nama_penerbit }}</td>
-                                        <td>{{ $data->alamat }}</td>
                                         <td>{{ $data->email }}</td>
                                         <td>
                                             <form action="{{ route('penerbit.destroy', $data->id) }}" method="post">

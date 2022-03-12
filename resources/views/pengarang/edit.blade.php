@@ -39,9 +39,6 @@
                                     <strong>{{ $message }}</strong>
                                 @enderror
                             </div>
-                         <label for="alamat">Alamat:</label>
-                            <textarea id="alamat" name="alamat" rows="4" cols="140">{{$pengarang->alamat}}
-                            </textarea>
                                <div class="form-group">
                                 <label for="">Masukan Email</label>
                                 <input type="text" name="email" value="{{$pengarang->email}}" class="form-control @error('nama_kategori') is-invalid @enderror">

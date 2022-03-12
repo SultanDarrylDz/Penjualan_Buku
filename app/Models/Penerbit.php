@@ -9,8 +9,8 @@ class Penerbit extends Model
 {
     use HasFactory;
     protected $table = "penerbit";
-    protected $fillable = ['nama_penerbit', 'alamat', 'email'];
-    protected $visible = ['nama_penerbit', 'alamat', 'email'];
+    protected $fillable = ['nama_penerbit', 'email'];
+    protected $visible = ['nama_penerbit', 'email'];
     public $timestamps = true;
 
     public function buku()

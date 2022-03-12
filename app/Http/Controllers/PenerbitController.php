@@ -24,7 +24,6 @@ class PenerbitController extends Controller
     {
         $rules = [
             'nama_penerbit' => 'required|max:255',
-            'alamat' => 'required',
             'email' => 'required',
 
         ];
@@ -33,7 +32,6 @@ class PenerbitController extends Controller
             'nama_penerbit.required' => 'nama penerbit harus diisi',
             'nama_penerbit.numeric' => 'nama penerbit tidak boleh angka',
             'nama_penerbit.max' => 'nama kategori maksimal 255 karakter',
-            'alamat.required' => 'alamat harus diisi',
             'email.required' => 'alamat harus di isi',
 
 
@@ -49,13 +47,11 @@ class PenerbitController extends Controller
         //validasi data
         $validated = $request->validate([
             'nama_penerbit' => 'required',
-            'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $penerbit = new Penerbit;
         $penerbit->nama_penerbit = $request->nama_penerbit;
-        $penerbit->alamat = $request->alamat;
         $penerbit->email = $request->email;
         $penerbit->save();
         Alert::success('Data '.$penerbit->nama_penerbit.' Berhasil Ditambahkan');
@@ -78,13 +74,11 @@ class PenerbitController extends Controller
         //
         $validated = $request->validate([
             'nama_penerbit' => 'required',
-            'alamat' => 'required',
             'email' => 'required',
         ]);
 
         $penerbit = Penerbit::findOrFail($id);
         $penerbit->nama_penerbit = $request->nama_penerbit;
-        $penerbit->alamat = $request->alamat;
         $penerbit->email = $request->email;
         $penerbit->save();
         Alert::success('Data '.$penerbit->nama_penerbit.' Berhasil Diedit');

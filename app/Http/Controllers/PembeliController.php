@@ -24,7 +24,7 @@ class PembeliController extends Controller
         $rules = [
             'nama_pembeli' => 'required|max:255|unique:pembeli',
             'alamat' => 'required',
-            'no_hp' => 'required',
+            'no_hp' => 'required|max:14|min:10',
 
         ];
 

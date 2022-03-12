@@ -10,8 +10,8 @@ class Pengarang extends Model
 {
     use HasFactory;
     protected $table = "pengarang";
-    protected $fillable = ['nama_pengarang', 'alamat', 'email'];
-    protected $visible = ['nama_pengarang', 'alamat', 'email'];
+    protected $fillable = ['nama_pengarang', 'email'];
+    protected $visible = ['nama_pengarang', 'email'];
     public $timestamps = true;
 
     public function buku()

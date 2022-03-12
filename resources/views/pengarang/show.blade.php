@@ -33,10 +33,6 @@
                         <input type="text" name="nama_pengarang" value="{{$pengarang->nama_pengarang}}" class="form-control" readonly>
                     </div>
                     <div class="form-group">
-                        <label for=""> Alamat</label>
-                        <input type="text" name="alamat" value="{{$pengarang->alamat}}" class="form-control" readonly>
-                    </div>
-                    <div class="form-group">
                         <label for=""> Email</label>
                         <input type="text" name="email" value="{{$pengarang->email}}" class="form-control" readonly>
                     </div>

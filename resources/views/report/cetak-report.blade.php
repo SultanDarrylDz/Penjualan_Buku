@@ -20,7 +20,6 @@
 
         th{
             padding: 5px;
-            background: pink;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 13px;
         }

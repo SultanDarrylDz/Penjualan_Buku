@@ -18,7 +18,7 @@ class CreatePembeliTable extends Migration
             $table->string('kode_pembeli');
             $table->string('nama_pembeli');
             $table->string('alamat');
-            $table->integer('no_hp');
+            $table->string('no_hp');
             $table->timestamps();
         });
     }
