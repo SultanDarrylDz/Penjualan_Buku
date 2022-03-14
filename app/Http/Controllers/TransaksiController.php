@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Transaksi;
 namespace App\Http\Controllers;
 use App\Models\Kategori;
 use App\Models\Buku;
