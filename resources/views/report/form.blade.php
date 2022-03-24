@@ -1,9 +1,5 @@
 @extends('adminlte::page')
 
-@section('content_header')
-    Admin Dashrboard
-@endsection
-
 @section('css')
 
 @endsection
@@ -13,25 +9,26 @@
 @endsection
 
 @section('content')
+<br>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">{{ __('Cetak Laporan') }}</div>
 
                     <div class="card-body">
                         <form action="{{ route('reportTransaksi') }}" method="post">
                             @csrf
                             <div class="form-group">
-                                <label for="">Date Start</label>
+                                <label for="">Tanggal Awal</label>
                                 <input type="date" name="tanggalAwal" id="" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Date End</label>
+                                <label for="">Tanggal Akhir</label>
                                 <input type="date" name="tanggalAkhir" id="" class="form-control">
                             </div>
                             <div class="form-group">
-                                <button class="btn btn-block btn-primary" type="submit">Search Report</button>
+                                <button class="btn btn-block btn-primary" type="submit">Cari Laporan</button>
                             </div>
                         </form>
                     </div>

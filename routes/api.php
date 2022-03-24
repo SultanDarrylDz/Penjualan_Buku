@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ApiUserController;
+use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\KategoriController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
