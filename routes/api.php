@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\API\ApiUserController;
 use App\Http\Controllers\API\ApiKategoriController;
-use App\Http\Controllers\API\BukuController;
+use App\Http\Controllers\API\ApiBukuController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
