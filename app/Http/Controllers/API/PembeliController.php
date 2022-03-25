@@ -40,7 +40,7 @@ class PembeliController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Data Pembeli Berhasil dibuat',
-            'data' => $buku,
+            'data' => $pembeli,
         ], 201);
     }
     public function show($id)

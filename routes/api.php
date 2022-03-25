@@ -4,6 +4,7 @@ use App\Http\Controllers\API\ApiUserController;
 use App\Http\Controllers\API\ApiKategoriController;
 use App\Http\Controllers\API\BookController;
 use App\Http\Controllers\API\PembeliController;
+use App\Http\Controllers\API\TransaksiController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,3 +28,4 @@ Route::resource('user', ApiUserController::class);
 Route::resource('kategori', ApiKategoriController::class);
 Route::resource('buku', BookController::class);
 Route::resource('pembeli', PembeliController::class);
+Route::resource('transaksi', TransaksiController::class);
