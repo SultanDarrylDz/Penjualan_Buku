@@ -123,7 +123,7 @@ class BookController extends Controller
     {
         //
         $buku = Buku::find($id);
-        $barang->delete();
+        $buku->delete();
         return response()->json([
             'success' => true,
             'message' => 'Data Buku Berhasil dihapus',
