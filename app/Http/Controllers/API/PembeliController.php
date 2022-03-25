@@ -16,11 +16,11 @@ class PembeliController extends Controller
      */
     public function index()
     {
-        $buku = Buku::all();
+        $pembeli = Pembeli::all();
         return response()->json([
             'success' => true,
-            'message' => 'Data Buku',
-            'data' => $buku,
+            'message' => 'Data Pembeli',
+            'data' => $pembeli,
         ], 200);
 
     }
