@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\API\ApiUserController;
 use App\Http\Controllers\API\ApiKategoriController;
-use App\Http\Controllers\API\ApiBukuController;
+use App\Http\Controllers\API\BookController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +24,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::resource('user', ApiUserController::class);
 Route::resource('kategori', ApiKategoriController::class);
-Route::resource('buku', ApiBukuController::class);
+Route::resource('buku', BookController::class);
