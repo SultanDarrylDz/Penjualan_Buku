@@ -6,7 +6,7 @@ use App\Models\Buku;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BukuController extends Controller
+class BookController extends Controller
 {
     //
     /**
