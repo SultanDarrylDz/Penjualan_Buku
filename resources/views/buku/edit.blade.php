@@ -3,7 +3,7 @@
 
 @section('content_header')
 
-    Edit Data Buku
+    Edit Data Buku 
 
 @stop
 
