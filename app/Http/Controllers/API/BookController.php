@@ -54,9 +54,9 @@ class BookController extends Controller
     public function index()
     {
         $buku = DB::table('buku')
-        ->join('kategori', 'buku.nama_kategori', '=', 'id')
-        ->join('pengarang', 'buku.nama_pengarang', '=', 'id')
-        ->join('penerbit', 'buku.nama_penerbit', '=', 'id')
+        ->join('kategori', 'buku.nama_kategori', '=', 'nama_kategori')
+        ->join('pengarang', 'buku.nama_pengarang', '=', 'nama_pengarang')
+        ->join('penerbit', 'buku.nama_penerbit', '=', 'nama_penerbit')
         ->select('buku.kode_buku', 'buku.judul', 'kategori.nama_kategori', 'pengarang.nama_pengarang', 'penerbit.nama_penerbit', 'buku.deskripsi', 'buku.stok', 'buku.harga', 'buku.cover')
         ->get();
         return response()->json([
