@@ -90,7 +90,7 @@ class TransaksiController extends Controller
         $buku->stok -= $request->jumlah_buku;
         $buku->save();
         $transaksi->save();
-        Alert::success('Data Transasi Berhasil Ditambahkan');
+        Alert::success('Data Transaksi Berhasil Ditambahkan');
         return redirect()->route('transaksi.index');
     }
 

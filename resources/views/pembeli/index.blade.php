@@ -42,8 +42,8 @@
                                         <form action="{{ route('pembeli.destroy', $data->id) }}" method="post">
                                             @method('delete')
                                             @csrf
-                                          <a href="{{ route('pembeli.edit', $data->id) }}"
-                                                    class="btn btn-outline-info"><i class="fa fa-edit"></i></a>
+                                          <!-- <a href="{{ route('pembeli.edit', $data->id) }}"
+                                                    class="btn btn-outline-info"><i class="fa fa-edit"></i></a> -->
                                                 <a href="{{ route('pembeli.show', $data->id) }}"
                                                     class="btn btn-outline-warning"><i class="fa fa-search"></i></a>
                                                 <button type="submit"

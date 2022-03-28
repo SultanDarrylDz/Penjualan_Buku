@@ -5,46 +5,9 @@ namespace App\Http\Controllers\API;
 use App\Models\Buku;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Kategori;
-use App\Models\Penerbit;
-use App\Models\Pengarang;
-use DB;
-
 
 class BookController extends Controller
 {
-    public function kategori()
-    {
-        $kategori = Kategori::all();
-        return response()->json([
-            'success' => true,
-            'message' => 'Data Kategori',
-            'data' => $kategori,
-        ], 200);
-
-    }
-
-    public function penerbit()
-    {
-        $penerbit = Penerbit::all();
-        return response()->json([
-            'success' => true,
-            'message' => 'Data Penerbit',
-            'data' => $penerbit,
-        ], 200);
-
-    }
-
-    public function pengarang()
-    {
-        $pengarang = Pengarang::all();
-        return response()->json([
-            'success' => true,
-            'message' => 'Data Pengarang',
-            'data' => $pengarang,
-        ], 200);
-
-    }
     //
     /**
      * Display a listing of the resource.
@@ -53,12 +16,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $buku = DB::table('buku')
-        ->join('kategori', 'buku.nama_kategori', '=', 'nama_kategori')
-        ->join('pengarang', 'buku.nama_pengarang', '=', 'nama_pengarang')
-        ->join('penerbit', 'buku.nama_penerbit', '=', 'nama_penerbit')
-        ->select('buku.kode_buku', 'buku.judul', 'kategori.nama_kategori', 'pengarang.nama_pengarang', 'penerbit.nama_penerbit', 'buku.deskripsi', 'buku.stok', 'buku.harga', 'buku.cover')
-        ->get();
+        $buku = Buku::all();
         return response()->json([
             'success' => true,
             'message' => 'Data Buku',
@@ -89,9 +47,9 @@ class BookController extends Controller
         $buku->kode_buku = mt_rand(1000,9999);
         $buku->judul = $request->judul;
         $buku->deskripsi = $request->deskripsi;
-        // $buku->nama_kategori = $request->nama_kategori;
-        // $buku->nama_pengarang = $request->nama_pengarang;
-        // $buku->nama_penerbit = $request->nama_penerbit;
+        $buku->nama_kategori = $request->nama_kategori;
+        $buku->nama_pengarang = $request->nama_pengarang;
+        $buku->nama_penerbit = $request->nama_penerbit;
         $buku->stok = $request->stok;
         $buku->harga = $request->harga;
         $buku->save();
@@ -142,9 +100,9 @@ class BookController extends Controller
         $buku = Buku::findOrFail($id);
         $buku->judul = $request->judul;
         $buku->deskripsi = $request->deskripsi;
-        // $buku->nama_kategori = $request->nama_kategori;
-        // $buku->nama_pengarang = $request->nama_pengarang;
-        // $buku->nama_penerbit = $request->nama_penerbit;
+        $buku->nama_kategori = $request->nama_kategori;
+        $buku->nama_pengarang = $request->nama_pengarang;
+        $buku->nama_penerbit = $request->nama_penerbit;
         $buku->stok = $request->stok;
         $buku->harga = $request->harga;
         $buku->save();
